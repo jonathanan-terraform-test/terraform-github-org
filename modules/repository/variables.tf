@@ -37,7 +37,11 @@ variable "allow_rebase_merge" {
   default = true
 }
 
-variable "default_branch" {
+variable "auto_init" {
+  default = true
+}
+
+variable "protect_branch" {
   default = "master"
 }
 

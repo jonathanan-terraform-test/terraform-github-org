@@ -10,7 +10,7 @@ resource "github_repository" "repository" {
   allow_merge_commit = "${var.allow_merge_commit}"
   allow_squash_merge = "${var.allow_squash_merge}"
   allow_rebase_merge = "${var.allow_rebase_merge}"
-  default_branch     = "${var.default_branch}"
+  auto_init          = "${var.auto_init}"
   archived           = "${var.archived}"
   topics             = "${var.topics}"
 
@@ -21,7 +21,7 @@ resource "github_repository" "repository" {
 
 resource "github_branch_protection" "repository_default" {
   repository     = "${var.name}"
-  branch         = "${var.default_branch}"
+  branch         = "${var.protect_branch}"
   enforce_admins = "${var.enforce_admins}"
 
   required_status_checks {
