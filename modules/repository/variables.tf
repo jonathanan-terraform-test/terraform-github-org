@@ -41,8 +41,9 @@ variable "auto_init" {
   default = true
 }
 
-variable "protect_branch" {
-  default = "master"
+variable "protected_branches" {
+  type = "list"
+  default = ["master"]
 }
 
 variable "archived" {

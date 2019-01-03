@@ -20,8 +20,10 @@ resource "github_repository" "repository" {
 }
 
 resource "github_branch_protection" "repository_default" {
+  count = "${length(var.protected_branches)}"
+
   repository     = "${var.name}"
-  branch         = "${var.protect_branch}"
+  branch         = "${var.protected_branches[count.index]}"
   enforce_admins = "${var.enforce_admins}"
 
   required_status_checks {
