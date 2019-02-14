@@ -1,17 +1,17 @@
 resource "github_team" "builders" {
-  name = "builders"
+  name        = "builders"
   description = "builders"
-  privacy = "closed"
+  privacy     = "closed"
 }
 
 resource "github_team_membership" "jonathanan" {
-  team_id = "${github_team.builders.id}"
+  team_id  = "${github_team.builders.id}"
   username = "jonathanan"
-  role = "maintainer"
+  role     = "maintainer"
 }
 
 resource "github_team_membership" "JoAlvarez" {
-  team_id = "${github_team.builders.id}"
+  team_id  = "${github_team.builders.id}"
   username = "JoAlvarez"
-  role = "member"
+  role     = "member"
 }

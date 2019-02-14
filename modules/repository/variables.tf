@@ -42,7 +42,7 @@ variable "auto_init" {
 }
 
 variable "protected_branches" {
-  type = "list"
+  type    = "list"
   default = ["master"]
 }
 
