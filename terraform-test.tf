@@ -4,3 +4,4 @@ module "terraform-test" {
 
   protected_branches = ["master", "test1", "test2"]
 }
+resource "null_resource" "example" {}
